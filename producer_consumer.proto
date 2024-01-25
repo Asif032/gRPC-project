@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package producerconsumer;
+
+message Data {
+  string value = 1;
+}
+
+service ProducerConsumer {
+  rpc Produce(Data) returns (Data);
+  rpc Consume(Data) returns (Data);
+}
